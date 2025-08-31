@@ -1,8 +1,0 @@
-
-services:
-  - type: web
-    name: entrega-novela
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python3 webhook_server.py"
-    autoDeploy: true
