@@ -15,6 +15,8 @@ def recibir_pago():
         archivo = generar_pdf(nombre, apellido)
         enviar_pdf(email, archivo)
     return 'OK', 200
-
+@app.route('/', methods=['GET'])
+def home():
+    return 'Servicio activo y esperando pagos de MercadoPago.', 200
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
